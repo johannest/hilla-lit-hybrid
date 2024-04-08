@@ -1,7 +1,8 @@
-# Custom project from Hilla
+# Flow-Hilla (Lit) Hybrid Example
 
-This project can be used as a starting point to create your own Hilla application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+This project demonstrates how to use Vaadin Flow and Hilla with Lit together in a single app.
+
+Hilla is a framework by Vaadin for building reactive web applications on Java backends. It seamlessly integrates a Lit TypeScript frontend with a Spring Boot backend.
 
 ## Running the application
 
@@ -29,18 +30,18 @@ Once the JAR file is built, you can run it using
   <tr><th>Directory</th><th>Description</th></tr>
   <tr><td><code>frontend/</code></td><td>Client-side source directory</td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>index.html</code></td><td>HTML template</td></tr>
-  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>index.ts</code></td><td>Frontend entrypoint, contains the client-side routing setup using <a href="https://hilla.dev/docs/routing/router">Hilla Router</a></td></tr>
+  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>index.ts</code></td><td>Frontend entrypoint</td></tr>
+  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>routes.ts</code></td><td>The client-side routing setup using <a href="https://hilla.dev/docs/routing/router">Hilla Router</a></td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>main-layout.ts</code></td><td>Main layout Web Component, contains the navigation menu, uses <a href="https://vaadin.com/docs/latest/ds/components/app-layout">App Layout</a></td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>views/</code></td><td>UI views Web Components (TypeScript)</td></tr>
-  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>themes/</code></td><td>Custom  
-CSS styles</td></tr>
-  <tr><td><code>src/main/java/&lt;groupId&gt;/</code></td><td>Server-side 
-source directory, contains the server-side Java views</td></tr>
+  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>themes/</code></td><td>Custom CSS styles</td></tr>
+  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>stores/</code></td><td>MobX stores for the client-side state management</td></tr>
+  <tr><td><code>src/main/java/&lt;groupId&gt;/</code></td><td>Server-side source directory, contains the server-side Java views</td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>Application.java</code></td><td>Server entry-point</td></tr>
 </table>
 
 ## Useful links
 
-- Read the documentation at [hilla.dev/docs](https://hilla.dev/docs/).
-- Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/hilla) or join our [Discord channel](https://discord.gg/MYFq5RTbBn).
+- Read the documentation at [https://hilla.dev/docs/lit](https://hilla.dev/docs/lit).
+- Ask questions on our [Forum](https://vaadin.com/forum/c/hilla/18) or on [Stack Overflow](https://stackoverflow.com/questions/tagged/hilla).
 - Report issues, create pull requests in [GitHub](https://github.dev/hilla).
