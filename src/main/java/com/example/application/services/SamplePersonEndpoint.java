@@ -4,14 +4,19 @@ import com.example.application.data.SamplePerson;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
 import dev.hilla.exception.EndpointException;
-import java.util.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.Optional;
+
 @Endpoint
 @AnonymousAllowed
 public class SamplePersonEndpoint {
+
+    private static final Logger logger = LoggerFactory.getLogger(SamplePersonEndpoint.class);
 
     private final SamplePersonService service;
 
@@ -29,6 +34,7 @@ public class SamplePersonEndpoint {
 
     public SamplePerson update(SamplePerson entity) {
         try {
+            logger.info("Sample person {} updated at the endpoint", entity.getId());
             return service.update(entity);
         } catch (OptimisticLockingFailureException e) {
             throw new EndpointException("Somebody else has updated the data while you were making changes.");

@@ -2,14 +2,19 @@ package com.example.application.services;
 
 import com.example.application.data.SamplePerson;
 import com.example.application.data.SamplePersonRepository;
-import java.util.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class SamplePersonService {
+
+    private static final Logger logger = LoggerFactory.getLogger(SamplePersonService.class);
 
     private final SamplePersonRepository repository;
 
@@ -22,6 +27,7 @@ public class SamplePersonService {
     }
 
     public SamplePerson update(SamplePerson entity) {
+        logger.info("Sample person {} updated at the service", entity.getId());
         return repository.save(entity);
     }
 
